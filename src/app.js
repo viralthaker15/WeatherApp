@@ -5,7 +5,6 @@ const geocode = require('./utils/geocode')
 const Weather = require('./utils/weather')
 
 
-
 const app = express()
 const port = process.env.PORT || 3000
 
