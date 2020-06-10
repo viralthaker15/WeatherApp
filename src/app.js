@@ -39,11 +39,24 @@ app.get('/about',(req, res) => {
 
 app.get('/help',(req,res) => {
     res.render('help',{
-        message: 'this is some helpful text',
         title: 'Help !',
         name: 'Viral Thaker'
     })
 
+})
+
+app.get('/weatherLoc' ,(req,res) => {
+
+    const lattitude = req.query.lati
+    const longitude = req.query.longi
+
+    Weather(lattitude,longitude,(error,forecastData)=>{
+        if(error)
+        {
+            return res.send({error})
+        }
+        res.send({forecastData})
+    })
 })
 
 app.get('/weather',(req,res) =>{
@@ -68,16 +81,11 @@ app.get('/weather',(req,res) =>{
             {
                 return res.send({error})
             }
-            res.send({
-                forecast:forecastData,
-                location,
-                address
-            })
+            res.send({location , forecastData})
         })
     
     })
 })
-
 
 app.get('/help/*' , (req, res) => {
     res.render('404error',{

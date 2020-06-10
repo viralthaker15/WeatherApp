@@ -4,23 +4,49 @@
 
 <head>
     <title>weather app</title>
-    <link rel="icon" href="/img/weather.png">
+    <link rel="icon" href="/img/icon.png">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <body>
     <div class="main-content">
+    <img class="imgWeather" src="/img/Weather.jpg"></img>
     {{>header}}
-    <p>use this site to get weather</p>
-
     <form>
         <input placeholder="Enter Location">
-        <button>Search</button>
+        <button class="button">Search</button>
+        <p style="position: absolute; top:185px; left:750px; font-family: 'Times New Roman', Times, serif;">OR</p> 
     </form>
+    <button id="locButton" class="button" style="position: absolute; top:190px; left:805px;">Your Location</button>
 
-    <p id="message-1"></p>
-    <p id="message-2"></p>
+    <p id="message-1" style="color: #d2dee4; font-size: 40px;  font-family: 'Times New Roman', Times, serif;" ></p>
+    </div>
+
+    <div id="left-box">
+    </div>
+
+
+    <div class="container">
+
+            <div id="st-box">
+                 <p style="font-size: 30px;  font-family: 'Times New Roman', Times, serif;">Temp :</p>
+                 <p style="font-size: 70px; color: #d2dee4" id="message-2">  
+                </p> 
+            </div>
+  
+            <div id="nd-box">
+                 <p style="font-size: 30px;  font-family: 'Times New Roman', Times, serif;">Humidity :</p>
+                 <p style="font-size: 70px; color: #d2dee4" id="message-3">  
+                </p> 
+            </div>
+
+            <div id="rd-box">
+                 <p style="font-size: 30px;  font-family: 'Times New Roman', Times, serif;">Rain   :</p>
+                 <p style="font-size: 70px; color: #d2dee4" id="message-4"> 
+                </p> 
+            </div>
     </div>
     {{>footer}}
 

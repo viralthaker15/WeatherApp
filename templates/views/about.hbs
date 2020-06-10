@@ -4,16 +4,28 @@
 
 <head>
         <title>about</title>
-        <link rel="icon" href="/img/weather.png">
+        <link rel="icon" href="/img/icon.png">
         <link rel="stylesheet" href="/css/styles.css">
+        <!--icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="main-content">
     {{>header}}
     <p>This site was created by Viral Thaker . It uses api data from mapbox.com and darksky.net</p>
-    <img class="portrait" src="/img/me.jpg">
+    <img style="width: 380px; height: 380px;" src="/img/me.jpg">
+    <p style="position: absolute; left:880px; top:280px;">You can find me on following platforms :</p>
     </div>
+
+    <!-- Add font awesome icons -->
+<a href="https://github.com/viralthaker15" target="_blank" class="fa fa-github" style="position: absolute; left:975px; top:350px; font-size:xx-large"></a>
+<a href="https://www.linkedin.com/in/viral-thaker-065877134/" target="_blank" class="fa fa-linkedin"style="position: absolute; left:1050px; top:350px; font-size:xx-large" ></a>
+<a href="https://www.instagram.com/itsnotyral/" target="_blank" class="fa fa-instagram" style="position: absolute; left:1125px; top:350px; font-size:xx-large"></a>
+
+
+    <p style="position: absolute; left:880px; top:450px;">Work related Queries?  You can Email me at :</p>
+    <p style="position: absolute; left:975px; top:500px;"><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=viralthaker27@gmail.com">viralthaker27@gmail.com</a></p>
 
     {{>footer}}
 </body>
